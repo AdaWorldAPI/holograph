@@ -28,6 +28,7 @@
 pub mod holographic;
 pub mod schema;
 pub mod compat;
+pub mod search;
 
 // ============================================================================
 // VECTOR DIMENSIONS
