@@ -90,6 +90,7 @@ pub mod graphblas;
 pub mod mindmap;
 #[cfg(feature = "datafusion-storage")]
 pub mod storage;
+pub mod cam;
 #[cfg(feature = "datafusion-storage")]
 pub mod query;
 
@@ -110,6 +111,14 @@ pub use bitpack::{
 pub use hamming::{HammingEngine, StackedPopcount, hamming_distance_ref};
 pub use resonance::{VectorField, Resonator, BoundEdge};
 pub use hdr_cascade::{HdrCascade, MexicanHat, SearchResult};
+pub use cam::{
+    CamHeader, CamRecord, CamIndex, CamCandidate, ContainerKind, WidthVariant,
+    fingerprint_from_10k, fingerprint_distance, fingerprint_similarity,
+    xor_fold_fingerprint, cam_prefilter, suggest_threshold,
+    HEADER_WORDS, HEADER_BYTES, FINGERPRINT_WORDS, FINGERPRINT_BITS,
+    META_WORDS, QUANTUM_WORDS, QUANTUM_BITS,
+    MONO_WORDS, MONO_BYTES, DENSE_WORDS, DENSE_BYTES, HOLO_WORDS, HOLO_BYTES,
+};
 
 // ========================================================================
 // Re-exports: Graph
